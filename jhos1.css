@@ -1,0 +1,122 @@
+:root{
+  --heart-color:#ff5873;
+  --background-color:#ebc8c0;
+  --white:#fff;
+}
+
+body{
+  font-family: Tahoma, sans-serif;
+  background-color: var(--background-color);
+  background-image:url('images/mini-hearth.png');
+  background-size: 75%;
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:var(--heart-color);
+  overflow:hidden;
+}
+
+.layout{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.card{
+  background:#ffb6c1;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 0 25px rgba(255,88,115,.6);
+  text-align:center;
+  z-index:2;
+}
+
+.title{
+  font-size:28px;
+}
+
+.heart-box{
+  width:280px;
+  margin:auto;
+}
+
+.img-fluid{
+  width:100%;
+}
+
+.text{
+  padding:20px;
+  font-size:18px;
+  min-height:50px;
+}
+
+.button{
+  background:var(--heart-color);
+  color:var(--white);
+  border:none;
+  padding:10px 30px;
+  margin:5px;
+  cursor:pointer;
+  font-size:16px;
+  border-radius:8px;
+}
+
+.button__negative{
+  background:var(--white);
+  color:var(--heart-color);
+}
+
+.button__error{
+  width:100%;
+  display:none;
+}
+
+/* Fotos laterales */
+.side{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.side img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:15px;
+  border:4px solid var(--heart-color);
+  animation:float 4s ease-in-out infinite;
+}
+
+.side-left img:nth-child(even){ animation-delay:1s; }
+.side-right img:nth-child(odd){ animation-delay:2s; }
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* Lluvia */
+.rain{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+}
+
+.heart{
+  position:absolute;
+  top:-40px;
+  font-size:20px;
+  animation:fall linear infinite;
+  color:var(--heart-color);
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
+}
