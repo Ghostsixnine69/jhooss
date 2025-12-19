@@ -3,7 +3,7 @@ const alternatives = [
   { text:"Entonces déjame decirte algo: contigo todo se siente más real", image:"images/cat-02.gif" },
   { text:"No te pregunto por hoy, te pregunto por todo lo que todavía no vivimos", image:"images/cat-03.gif" },
   { text:"Yo ya te elegí, incluso en los días simples, incluso en los complicados", image:"images/cat-04.gif" },
-  { text:"Entonces no es una pregunta… es una verdad: quiero caminar contigo.", image:"images/cat-05.gif" }
+  { text:"Entonces no es una pregunta… es una verdad: quiero caminar contigo", image:"images/cat-05.gif" }
 ];
 
 const ohyes = {
@@ -64,4 +64,5 @@ setInterval(()=>{
   rain.appendChild(heart);
   setTimeout(()=>heart.remove(),5000);
 },300);
+
 
